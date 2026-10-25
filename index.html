@@ -1,111 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-AO">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rozenaldo Martins - Benguela</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RM | Rozenaldo Martins</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <style>
-body{margin:0;background:#0a0a0a;color:#fff;font-family:Arial,sans-serif;padding:0 15px}
-header{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #222}
-.logo{font-weight:900;font-size:20px}
-.hero{text-align:center;padding:30px 0}
-.avatar{width:90px;height:90px;border-radius:50%;background:#111;border:2px solid #22ff88;display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-weight:900;font-size:30px}
-.green{color:#22ff88}
-.desc{color:#9ab;line-height:1.5}
-.section{margin-top:35px}
-.card{background:#151515;border:1px solid #222;padding:15px;border-radius:12px;margin:8px 0}
-.bar{height:8px;background:#0a2010;border-radius:10px;margin-top:6px;overflow:hidden}
-.fill{height:100%;background:#22ff88}
-.proj-card{background:#141414;border:1px solid #222;border-radius:16px;padding:12px;margin:12px 0}
-.proj-img{height:110px;background:#0d1f0f;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#22ff88;font-weight:900;font-size:20px;border:1px solid #1a3d1f}
-.proj-title{font-size:18px;font-weight:800;margin:12px 0 4px 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.badge{font-size:11px;padding:4px 10px;border-radius:20px;font-weight:700}
-.badge-green{background:#142a16;color:#22ff88;border:1px solid #22ff88}
-.badge-yellow{background:#2a2514;color:#ffcc00;border:1px solid #3d3511}
-.proj-desc{color:#888;font-size:13px;line-height:1.4;margin-bottom:10px}
-.tags{display:flex;gap:6px;flex-wrap:wrap}
-.tag{border:1px solid #333;border-radius:20px;padding:4px 10px;font-size:11px;color:#aaa}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{background:#081a12;color:#d7f0e4}
+:root{--green:#22ff88;--card:#112a1e;--border:#1e4430}
+header{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:rgba(8,26,18,0.95);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid var(--border)}
+.logo{font-weight:900;font-size:28px}.logo span:first-child{color:var(--green)}.logo span:last-child{color:#fff}
+.hero{padding:30px 20px 100px}
+.badge{color:var(--green);font-size:14px;margin-bottom:6px}
+.hero h1{font-size:36px;line-height:1.1;margin-bottom:8px}
+.hero h1 b{color:#fff}.hero h1 span{color:var(--green)}
+.hero h2{color:var(--green);font-size:16px;margin-bottom:14px}
+.desc{color:#8fb5a0;font-size:14.5px;line-height:1.6;max-width:340px;margin-bottom:22px}
+.btns{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap}
+.btn-green{background:var(--green);color:#000;padding:12px 20px;border-radius:30px;font-weight:700;text-decoration:none;font-size:14px;display:inline-flex;gap:8px}
+.btn-dark{border:1px solid var(--border);color:#d7f0e4;padding:12px 20px;border-radius:30px;font-weight:600;text-decoration:none;font-size:14px}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:28px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:14px;text-align:center}
+.stat strong{display:block;color:var(--green);font-size:22px}
+.stat span{font-size:12px;color:#8fb5a0}
+.sec-title{font-size:20px;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{border:1px solid var(--border);background:var(--card);padding:6px 12px;border-radius:20px;font-size:12px}
+.section{padding:24px 20px 100px;display:none}.section.active{display:block}
+.card-big{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;margin-bottom:14px}
+.card-big .top{height:120px;background:#0e2e1e;border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--green);font-weight:800;font-size:20px;margin-bottom:14px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(10,34,24,0.98);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:8px 0 14px;z-index:20}
+.bottom a{color:#5d8a71;text-decoration:none;font-size:11px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px}
+.bottom a.active{color:var(--green)}.bottom i{font-size:18px}
 </style>
 </head>
 <body>
-<header><div class="logo">RML</div><div style="font-size:12px;color:#888">BENGUELA • ANGOLA</div></header>
-
-<div class="hero">
-<div class="avatar">RM</div>
-<h1>Rozenaldo<br><span class="green">Martins</span></h1>
-<p style="color:#22ff88;font-weight:700;font-size:16px;margin-bottom:8px">Técnico em Hardware & Redes | Criador de Jogos 2D</p>
-<p class="desc">De Benguela, Angola. Com experiência em montagem de PCs, redes ponto a ponto (RJ45) e desenvolvimento de jogos 2D com GDevelop.</p>
+<header><div class="logo"><span>R</span><span>M</span></div></header>
+<div id="inicio" class="section active hero">
+<p class="badge">Olá, Bem-vindo!</p>
+<h1><b>Rozenaldo</b> <span>Martins</span></h1>
+<h2>Técnico em Hardware & Redes | Criador de Jogos 2D</h2>
+<p class="desc">Sou natural de Benguela, Angola, com grande interesse em TI. Possuo conhecimentos básicos de programação e tenho desenvolvido competências em montagem de PCs, redes ponto a ponto (RJ45) e jogos educativos em GDevelop através da formação Cód.ao da Unitel. Estou motivado em continuar a aprender e a desenvolver novas habilidades na área de TI.</p>
+<div class="btns">
+<a class="btn-green" href="#" onclick="go('projectos')">Ver Projectos →</a>
+<a class="btn-dark" href="#" onclick="go('contacto')">Entrar em contacto</a>
 </div>
-
-<div class="section">
-<h2>Quem sou <span class="green">Eu?</span></h2>
-<p style="color:#9ab;line-height:1.6">Olá! Sou o Rozenaldo Martins, natural de Benguela, Angola, com grande interesse na área de Tecnologia da Informação. Possuo conhecimentos básicos de programação e tenho desenvolvido competências em montagens de computadores, redes cabeadas ponto à ponto(RJ45) e criação de jogos educativos em 2D na plataforma Gdevelop, através da formação Cod Unitel. Estou motivado em continuar a aprender e a desenvolver novas habilidades na área de TI.</p>
-<div class="card">🎓 Estudante - Ensino Médio</div>
-<div class="card">📍 Benguela, Angola</div>
-<div class="card">🎮 Jogos 2D - GDevelop (Cód Unitel)</div>
-<div class="card">🔌 Redes Ponto a Ponto - RJ45</div>
+<div class="stats">
+<div class="stat"><strong>3</strong><span>Projectos</span></div>
+<div class="stat"><strong>6</strong><span>Habilidades</span></div>
+<div class="stat"><strong>2</strong><span>Em curso</span></div>
 </div>
-
-<div class="section" id="projetos">
-<h2>Meus <span class="green">Projectos</span></h2>
-<p style="color:#888;font-size:13px">Alguns dos projetos que já desenvolvi e que estou a desenvolver.</p>
-
-<div class="proj-card" style="border:1px solid #22ff88">
-<div class="proj-img">🇦🇴 Aventuras em Angola</div>
-<div class="proj-title">Aventuras em Angola <span class="badge badge-green">Finalizado</span></div>
-<div class="proj-desc">Um jogo educativo em 2D criado na plataforma GDevelop. O jogador explora cenários de Angola, aprende cultura e enfrenta desafios.</div>
-<div class="tags"><span class="tag">GDevelop</span><span class="tag">Jogos 2D</span><span class="tag">Cód Unitel</span></div>
-</div>
-
-<div class="proj-card">
-<div class="proj-img">🔌 Rede Ponto a Ponto</div>
-<div class="proj-title">Rede Ponto a Ponto <span class="badge badge-green">Finalizado</span></div>
-<div class="proj-desc">Criação de rede ponto a ponto, crimpagem de cabos RJ45, configuração de roteadores e partilha de internet.</div>
-<div class="tags"><span class="tag">Hardware</span><span class="tag">Redes</span><span class="tag">RJ45</span></div>
-</div>
-
-<div class="proj-card">
-<div class="proj-img">🖥️ Montagem PC</div>
-<div class="proj-title">Montagem de Computadores <span class="badge badge-green">Finalizado</span></div>
-<div class="proj-desc">Montagem completa, diagnóstico e manutenção de PCs.</div>
-<div class="tags"><span class="tag">Hardware</span><span class="tag">Manutenção</span></div>
-</div>
-
-<div class="proj-card">
-<div class="proj-img">💾 SQL Database</div>
-<div class="proj-title">Sistema de Gestão <span class="badge badge-yellow">Em desenvolvimento</span></div>
-<div class="proj-desc">Base de dados para gestão com SQL - 50% concluído.</div>
-<div class="tags"><span class="tag">SQL</span><span class="tag">Base de Dados</span></div>
-</div>
-
-<div class="proj-card">
-<div class="proj-img">Portfólio</div>
-<div class="proj-title">Portfólio Pessoal <span class="badge badge-green">Finalizado</span></div>
-<div class="proj-desc">Meu site pessoal para apresentar meus trabalhos e habilidades.</div>
-<div class="tags"><span class="tag">HTML</span><span class="tag">GitHub Pages</span></div>
-</div>
-
-</div>
-
-<div class="section">
-<h2>Minhas <span class="green">Habilidades</span></h2>
-<p style="color:#888;font-size:13px">O que eu realmente sei fazer.</p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-<div class="card" style="text-align:center;border:1px solid #22ff88">🎮<br><b>GDevelop</b><br><small style="color:#22ff88">Cód Unitel</small><br><div class="bar"><div class="fill" style="width:85%"></div></div><small>85%</small></div>
-<div class="card" style="text-align:center;border:1px solid #22ff88">🔌<br><b>Redes</b><br><small style="color:#22ff88">Ponto a Ponto</small><br><div class="bar"><div class="fill" style="width:80%"></div></div><small>80% - RJ45</small></div>
-<div class="card" style="text-align:center">🔧<br><b>Hardware</b><div class="bar"><div class="fill" style="width:60%"></div></div><small>60%</small></div>
-<div class="card" style="text-align:center">💾<br><b>SQL</b><div class="bar"><div class="fill" style="width:50%"></div></div><small>50%</small></div>
-<div class="card" style="text-align:center">5️⃣<br><b>HTML</b><div class="bar"><div class="fill" style="width:50%"></div></div><small>50%</small></div>
-<div class="card" style="text-align:center">🐙<br><b>Git & GitHub</b><div class="bar"><div class="fill" style="width:40%"></div></div><small>40%</small></div>
+<p class="sec-title">Tecnologias</p>
+<div class="tags">
+<span class="tag">GDevelop</span><span class="tag">Hardware</span><span class="tag">Redes RJ45</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">Git & GitHub</span>
 </div>
 </div>
-
-<div class="section" id="contacto">
-<h2>Contacto</h2>
-<div class="card">📱 <a href="https://wa.me/244952654861" style="color:#22ff88;font-weight:700;text-decoration:none">WhatsApp - 952 654 861</a></div>
-<div class="card">✉️ martinsrozenaldo51@gmail.com</div>
-</div>
-
-<div style="text-align:center;padding:30px;color:#555;font-size:12px">© 2026 Rozenaldo Martins - Benguela - Cód Unitel</div>
-</body>
-</html>
