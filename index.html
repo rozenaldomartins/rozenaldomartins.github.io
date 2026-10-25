@@ -2,57 +2,132 @@
 <html lang="pt-AO">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RM | Rozenaldo Martins</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-body{background:#081a12;color:#d7f0e4}
-:root{--green:#22ff88;--card:#112a1e;--border:#1e4430}
-header{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:rgba(8,26,18,0.95);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid var(--border)}
-.logo{font-weight:900;font-size:28px}.logo span:first-child{color:var(--green)}.logo span:last-child{color:#fff}
-.hero{padding:30px 20px 100px}
-.badge{color:var(--green);font-size:14px;margin-bottom:6px}
-.hero h1{font-size:36px;line-height:1.1;margin-bottom:8px}
-.hero h1 b{color:#fff}.hero h1 span{color:var(--green)}
-.hero h2{color:var(--green);font-size:16px;margin-bottom:14px}
-.desc{color:#8fb5a0;font-size:14.5px;line-height:1.6;max-width:340px;margin-bottom:22px}
-.btns{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap}
-.btn-green{background:var(--green);color:#000;padding:12px 20px;border-radius:30px;font-weight:700;text-decoration:none;font-size:14px;display:inline-flex;gap:8px}
-.btn-dark{border:1px solid var(--border);color:#d7f0e4;padding:12px 20px;border-radius:30px;font-weight:600;text-decoration:none;font-size:14px}
-.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:28px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,sans-serif}
+body{background:#06110a;color:#e8f5ec;overflow-x:hidden}
+:root{--green:#22ff88;--card:#10291d;--card2:#0e2319;--border:#1c3e2b;--text:#8fb5a0}
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:rgba(6,17,10,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-weight:900;font-size:26px} .logo b{color:var(--green)} .logo span{color:#fff}
+.section{min-height:100vh;padding:90px 20px 110px;display:none}
+.section.active{display:block}
+#capa{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 120px}
+.avatar{width:140px;height:140px;border-radius:50%;border:2px solid var(--green);display:grid;place-items:center;background:radial-gradient(circle,#123a25,#06110a);margin-bottom:12px;box-shadow:0 0 30px rgba(34,255,136,0.2)}
+.avatar i{font-size:70px;color:var(--green)}
+.capa-name{font-size:13px;color:var(--text);margin-bottom:18px}
+.hero-sub{color:var(--green);font-size:13px;margin-bottom:4px}
+.btn-green{background:var(--green);color:#000;padding:13px 22px;border-radius:30px;font-weight:800;text-decoration:none;font-size:14px;display:inline-flex;gap:8px;align-items:center;border:none;cursor:pointer}
+.btn-dark{border:1px solid var(--border);color:#e8f5ec;padding:12px 20px;border-radius:30px;font-weight:600;text-decoration:none;font-size:13px}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:14px;text-align:center}
 .stat strong{display:block;color:var(--green);font-size:22px}
-.stat span{font-size:12px;color:#8fb5a0}
-.sec-title{font-size:20px;margin-bottom:14px}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{border:1px solid var(--border);background:var(--card);padding:6px 12px;border-radius:20px;font-size:12px}
-.section{padding:24px 20px 100px;display:none}.section.active{display:block}
-.card-big{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;margin-bottom:14px}
-.card-big .top{height:120px;background:#0e2e1e;border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--green);font-weight:800;font-size:20px;margin-bottom:14px}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(10,34,24,0.98);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:8px 0 14px;z-index:20}
-.bottom a{color:#5d8a71;text-decoration:none;font-size:11px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px}
-.bottom a.active{color:var(--green)}.bottom i{font-size:18px}
+.stat span{font-size:11px;color:var(--text)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tag{border:1px solid var(--border);background:var(--card2);padding:6px 12px;border-radius:20px;font-size:11px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;margin-bottom:14px}
+.card .top{height:130px;background:#0d281b;border-radius:14px;display:grid;place-items:center;color:var(--green);font-weight:800;font-size:22px;margin-bottom:12px}
+.badge{font-size:10px;padding:4px 10px;border-radius:20px;font-weight:700}
+.badge-ok{background:var(--green);color:#000}.badge-dev{background:#1a3d2e;color:var(--green);border:1px solid var(--border)}
+.skill-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.skill{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px;text-align:center}
+.bar{height:8px;background:#0e2319;border-radius:10px;margin-top:8px;overflow:hidden}.fill{height:100%;background:var(--green)}
+.contact{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:12px;display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.contact i{width:36px;height:36px;background:#143122;display:grid;place-items:center;border-radius:10px;color:var(--green)}
+input,textarea{width:100%;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px;color:#fff;margin:6px 0 12px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(9,27,17,0.98);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:8px 0 18px;z-index:200}
+.bottom a{color:#5d8a71;text-decoration:none;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:4px}.bottom a.active{color:var(--green)}.bottom i{font-size:18px}
+.back{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-weight:600;cursor:pointer}
 </style>
 </head>
 <body>
-<header><div class="logo"><span>R</span><span>M</span></div></header>
-<div id="inicio" class="section active hero">
-<p class="badge">Olá, Bem-vindo!</p>
-<h1><b>Rozenaldo</b> <span>Martins</span></h1>
-<h2>Técnico em Hardware & Redes | Criador de Jogos 2D</h2>
-<p class="desc">Sou natural de Benguela, Angola, com grande interesse em TI. Possuo conhecimentos básicos de programação e tenho desenvolvido competências em montagem de PCs, redes ponto a ponto (RJ45) e jogos educativos em GDevelop através da formação Cód.ao da Unitel. Estou motivado em continuar a aprender e a desenvolver novas habilidades na área de TI.</p>
-<div class="btns">
-<a class="btn-green" href="#" onclick="go('projectos')">Ver Projectos →</a>
-<a class="btn-dark" href="#" onclick="go('contacto')">Entrar em contacto</a>
+<header><div class="logo"><b>R</b><span>M</span></div></header>
+
+<div id="capa" class="section active">
+<div class="avatar"><i class="fa-solid fa-user"></i></div>
+<div class="capa-name">Rozenaldo Martins</div>
+<h1><span style="color:#fff">Olá, eu sou</span><br><span style="color:#fff">Rozenaldo</span><br><span style="color:#22ff88">Martins</span></h1>
+<p style="color:#8fb5a0;margin:10px 0 20px;font-size:14px">Técnico em Hardware & Redes | Criador de Jogos 2D</p>
+<p style="color:#8fb5a0;font-size:14px;max-width:320px;margin-bottom:22px">Transformo conhecimentos básicos em soluções práticas, criando experiências que fazem a diferença.</p>
+<a class="btn-green" onclick="go('inicio')">Ver Portfólio →</a>
 </div>
-<div class="stats">
-<div class="stat"><strong>3</strong><span>Projectos</span></div>
-<div class="stat"><strong>6</strong><span>Habilidades</span></div>
-<div class="stat"><strong>2</strong><span>Em curso</span></div>
+
+<div id="inicio" class="section">
+<p class="hero-sub">Olá, Bem-vindo!</p>
+<h1><span style="color:#fff">Rozenaldo</span> <span style="color:#22ff88">Martins</span></h1>
+<h3 style="color:#22ff88;font-size:14px;margin:6px 0 12px">Técnico em Hardware & Redes | Criador de Jogos 2D</h3>
+<p style="color:#8fb5a0;font-size:14px;line-height:1.6;margin-bottom:20px">Sou natural de Benguela, Angola, com grande interesse em TI. Possuo conhecimentos básicos de programação e tenho desenvolvido competências em montagem de PCs, redes ponto a ponto (RJ45) e jogos educativos em GDevelop através da formação Cód.ao da Unitel.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+<a class="btn-green" onclick="go('projectos')">Ver Projectos →</a>
+<a class="btn-dark" onclick="go('contacto')">Entrar em contacto</a>
 </div>
-<p class="sec-title">Tecnologias</p>
-<div class="tags">
-<span class="tag">GDevelop</span><span class="tag">Hardware</span><span class="tag">Redes RJ45</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">Git & GitHub</span>
+<div class="stats"><div class="stat"><strong>3</strong><span>Projectos</span></div><div class="stat"><strong>6</strong><span>Habilidades</span></div><div class="stat"><strong>2</strong><span>Em curso</span></div></div>
+<h3 style="margin:20px 0 10px;font-size:16px">Tecnologias</h3>
+<div class="tags"><span class="tag">GDevelop</span><span class="tag">Hardware</span><span class="tag">Redes RJ45</span><span class="tag">SQL</span><span class="tag">HTML</span><span class="tag">Git & GitHub</span></div>
 </div>
+
+<div id="sobre" class="section">
+<div class="back" onclick="go('inicio')"><i class="fa-solid fa-arrow-left"></i> Sobre Mim</div>
+<h1 style="font-size:30px;margin-bottom:12px">Quem sou <span style="color:#22ff88">Eu?</span></h1>
+<p style="color:#8fb5a0;font-size:14px;margin-bottom:12px">Eu sou o Rozenaldo, tenho interesse em Tecnologia da Informação e sou técnico em montagem de computadores e criador de jogos 2D. Gosto de aprender coisas novas, como tecnologia, redes e programação.</p>
+<p style="color:#8fb5a0;font-size:14px;margin-bottom:18px">Acredito que com esforço, disciplina e foco é possível alcançar grandes objetivos na área de TI.</p>
+<div class="card"><i class="fa-solid fa-graduation-cap" style="color:#22ff88"></i> <b>Estudante</b> - Ensino Médio</div>
+<div class="card"><i class="fa-solid fa-location-dot" style="color:#22ff88"></i> <b>Benguela / Talatona, Angola</b></div>
+<div class="stats"><div class="stat"><strong>3</strong><span>Projectos</span></div><div class="stat"><strong>6</strong><span>Habilidades</span></div><div class="stat"><strong>2</strong><span>Em curso</span></div></div>
 </div>
+
+<div id="projectos" class="section">
+<div class="back" onclick="go('inicio')"><i class="fa-solid fa-arrow-left"></i> Projectos</div>
+<h1 style="font-size:30px">Meus Projectos</h1>
+<p style="color:#8fb5a0;font-size:13px;margin-bottom:18px">Alguns dos projectos que já desenvolvi e que estou a desenvolver.</p>
+<div class="card"><div class="top">Aventuras em Angola</div><b>Aventuras em Angola</b> <span class="badge badge-ok">Finalizado</span><p style="color:#8fb5a0;font-size:13px;margin-top:6px">Jogo educativo 2D em GDevelop - Cód.ao Unitel.</p></div>
+<div class="card"><div class="top">Rede RJ45</div><b>Instalação de Rede Ponto a Ponto</b> <span class="badge badge-ok">Finalizado</span><p style="color:#8fb5a0;font-size:13px;margin-top:6px">Rede cabeada com crimpagem RJ45.</p></div>
+<div class="card"><div class="top">Portfólio RM</div><b>Portfólio Pessoal RM</b> <span class="badge badge-dev">Em desenvolvimento</span><p style="color:#8fb5a0;font-size:13px;margin-top:6px">Meu site pessoal para apresentar trabalhos.</p></div>
+</div>
+
+<div id="habilidades" class="section">
+<div class="back" onclick="go('inicio')"><i class="fa-solid fa-arrow-left"></i> Habilidades</div>
+<h1 style="font-size:26px;margin-bottom:14px">Minhas Habilidades</h1>
+<div class="skill-grid">
+<div class="skill"><i class="fa-solid fa-gamepad" style="color:#22ff88"></i><b>GDevelop</b><div class="bar"><div class="fill" style="width:85%"></div></div><small>85%</small></div>
+<div class="skill"><i class="fa-solid fa-network-wired" style="color:#22ff88"></i><b>Redes</b><div class="bar"><div class="fill" style="width:80%"></div></div><small>80%</small></div>
+<div class="skill"><i class="fa-solid fa-microchip" style="color:#22ff88"></i><b>Hardware</b><div class="bar"><div class="fill" style="width:70%"></div></div><small>70%</small></div>
+<div class="skill"><i class="fa-solid fa-database" style="color:#ffcc00"></i><b>SQL</b><div class="bar"><div class="fill" style="width:50%"></div></div><small>50%</small></div>
+<div class="skill"><i class="fa-brands fa-html5" style="color:#ff5a1f"></i><b>HTML</b><div class="bar"><div class="fill" style="width:60%"></div></div><small>60%</small></div>
+<div class="skill"><i class="fa-brands fa-github"></i><b>Git & GitHub</b><div class="bar"><div class="fill" style="width:45%"></div></div><small>45%</small></div>
+</div>
+<h3 style="margin:24px 0 10px">Outras Habilidades</h3>
+<div class="tags"><span class="tag">Comunicação</span><span class="tag">Trabalho em equipe</span><span class="tag">Resolução de problemas</span><span class="tag">Criatividade</span></div>
+</div>
+
+<div id="contacto" class="section">
+<h1 style="font-size:30px">Vamos <span style="color:#22ff88">conversar!</span></h1>
+<p style="color:#8fb5a0;font-size:14px;margin:8px 0 18px">Se tens alguma ideia, proposta ou queres apenas conversar sobre tecnologia, estou sempre disponível.</p>
+<div class="contact"><i class="fa-solid fa-envelope"></i><div><small>Email</small><br><b style="font-size:13px">rozenaldomartins@gmail.com</b></div></div>
+<div class="contact"><i class="fa-solid fa-phone"></i><div><small>Telefone</small><br><b>+244 952 654 861</b></div></div>
+<div class="contact"><i class="fa-solid fa-location-dot"></i><div><small>Localização</small><br><b>Benguela, Angola</b></div></div>
+<label>Nome</label><input placeholder="O teu nome">
+<label>Email</label><input placeholder="teuemail@exemplo.com">
+<label>Mensagem</label><textarea placeholder="Escreve a tua mensagem..."></textarea>
+<button class="btn-green" style="width:100%;justify-content:center">Enviar mensagem</button>
+</div>
+
+<nav class="bottom">
+<a onclick="go('capa')"><i class="fa-solid fa-house"></i>início</a>
+<a onclick="go('sobre')"><i class="fa-regular fa-user"></i>Sobre</a>
+<a onclick="go('projectos')"><i class="fa-solid fa-briefcase"></i>Projectos</a>
+<a onclick="go('habilidades')"><i class="fa-solid fa-code"></i>Habilidades</a>
+<a onclick="go('contacto')"><i class="fa-regular fa-envelope"></i>Contacto</a>
+</nav>
+
+<script>
+function go(id){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('.bottom a').forEach(a=>a.classList.remove('active'));
+window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
