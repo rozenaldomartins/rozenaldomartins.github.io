@@ -11,41 +11,82 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 .hero{text-align:center;padding:30px 0}
 .avatar{width:90px;height:90px;border-radius:50%;background:#111;border:2px solid #22ff88;display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-weight:900;font-size:30px}
 .green{color:#22ff88}
-.desc{color:#9ab}
-.btn{padding:12px 20px;border-radius:20px;text-decoration:none;display:inline-block;margin:5px;font-weight:700}
-.btn-g{background:#22ff88;color:#000}
-.btn-o{border:1px solid #333;color:#fff}
-.section{margin-top:30px}
+.desc{color:#9ab;line-height:1.5}
+.section{margin-top:35px}
 .card{background:#151515;border:1px solid #222;padding:15px;border-radius:12px;margin:8px 0}
-.project{background:#151515;border:1px solid #222;border-radius:12px;padding:15px;margin:10px 0}
-.top{color:#22ff88;font-weight:700;font-size:12px;margin-bottom:5px}
 .bar{height:8px;background:#0a2010;border-radius:10px;margin-top:6px;overflow:hidden}
 .fill{height:100%;background:#22ff88}
+.proj-card{background:#141414;border:1px solid #222;border-radius:16px;padding:12px;margin:12px 0}
+.proj-img{height:110px;background:#0d1f0f;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#22ff88;font-weight:900;font-size:20px;border:1px solid #1a3d1f}
+.proj-title{font-size:18px;font-weight:800;margin:12px 0 4px 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:11px;padding:4px 10px;border-radius:20px;font-weight:700}
+.badge-green{background:#142a16;color:#22ff88;border:1px solid #22ff88}
+.badge-yellow{background:#2a2514;color:#ffcc00;border:1px solid #3d3511}
+.proj-desc{color:#888;font-size:13px;line-height:1.4;margin-bottom:10px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{border:1px solid #333;border-radius:20px;padding:4px 10px;font-size:11px;color:#aaa}
 </style>
 </head>
 <body>
 <header><div class="logo">RML</div><div style="font-size:12px;color:#888">BENGUELA • ANGOLA</div></header>
+
 <div class="hero">
 <div class="avatar">RM</div>
 <h1>Rozenaldo<br><span class="green">Martins</span></h1>
-<p class="green">Estudante & Desenvolvedor - Jogos 2D e Redes</p>
-<p class="desc">De Benguela. Montagem de PC, Redes Ponto a Ponto com cabeamento RJ45, Base de Dados e Jogos 2D com GDevelop (Cód Unitel).</p>
+<p style="color:#22ff88;font-weight:700;font-size:16px;margin-bottom:8px">Técnico em Hardware & Redes | Criador de Jogos 2D</p>
+<p class="desc">De Benguela, Angola. Especialista em montagem de PCs, redes ponto a ponto (RJ45) e desenvolvimento de jogos 2D com GDevelop.</p>
 </div>
+
 <div class="section">
 <h2>Quem sou <span class="green">Eu?</span></h2>
-<p style="color:#9ab">Sou o Rozenaldo Martins, de Benguela. Apaixonado por tecnologia: hardware, redes e jogos 2D. Curso GDevelop com código Unitel.</p>
+<p style="color:#9ab;line-height:1.6">Olá! Sou o Rozenaldo Martins, jovem de Benguela apaixonado por tecnologia. Transformo ideias em soluções reais: monto e reparo computadores, crio redes cabeadas estáveis e desenvolvo jogos 2D educativos com GDevelop através do programa Cód Unitel.</p>
 <div class="card">🎓 Estudante - Ensino Médio</div>
 <div class="card">📍 Benguela, Angola</div>
 <div class="card">🎮 Jogos 2D - GDevelop (Cód Unitel)</div>
-<div class="card">🔌 Redes Ponto a Ponto - Cabeamento RJ45</div>
+<div class="card">🔌 Redes Ponto a Ponto - RJ45</div>
 </div>
+
 <div class="section" id="projetos">
 <h2>Meus <span class="green">Projectos</span></h2>
-<div class="project"><div class="top">Montagem</div><b>Montagem de PCs</b></div>
-<div class="project" style="border:1px solid #22ff88"><div class="top">🔌 Redes Ponto a Ponto</div><b>Cabeamento RJ45</b><p style="color:#888;font-size:13px">Rede ponto a ponto, crimpagem RJ45 e configuração.</p></div>
-<div class="project"><div class="top">Base de Dados</div><b>SQL - 50%</b></div>
-<div class="project" style="border:1px solid #22ff88"><div class="top">🎮 GDevelop - Cód Unitel</div><b>Jogos 2D</b><p style="color:#888;font-size:13px">Curso com Código Unitel. Jogos 2D.</p></div>
+<p style="color:#888;font-size:13px">Alguns dos projetos que já desenvolvi e que estou a desenvolver.</p>
+
+<div class="proj-card" style="border:1px solid #22ff88">
+<div class="proj-img">🇦🇴 Aventuras em Angola</div>
+<div class="proj-title">Aventuras em Angola <span class="badge badge-green">Finalizado</span></div>
+<div class="proj-desc">Um jogo educativo em 2D criado na plataforma GDevelop. O jogador explora cenários de Angola, aprende cultura e enfrenta desafios.</div>
+<div class="tags"><span class="tag">GDevelop</span><span class="tag">Jogos 2D</span><span class="tag">Cód Unitel</span></div>
 </div>
+
+<div class="proj-card">
+<div class="proj-img">🔌 Rede Ponto a Ponto</div>
+<div class="proj-title">Rede Ponto a Ponto <span class="badge badge-green">Finalizado</span></div>
+<div class="proj-desc">Criação de rede ponto a ponto, crimpagem de cabos RJ45, configuração de roteadores e partilha de internet.</div>
+<div class="tags"><span class="tag">Hardware</span><span class="tag">Redes</span><span class="tag">RJ45</span></div>
+</div>
+
+<div class="proj-card">
+<div class="proj-img">🖥️ Montagem PC</div>
+<div class="proj-title">Montagem de Computadores <span class="badge badge-green">Finalizado</span></div>
+<div class="proj-desc">Montagem completa, diagnóstico e manutenção de PCs.</div>
+<div class="tags"><span class="tag">Hardware</span><span class="tag">Manutenção</span></div>
+</div>
+
+<div class="proj-card">
+<div class="proj-img">💾 SQL Database</div>
+<div class="proj-title">Sistema de Gestão <span class="badge badge-yellow">Em desenvolvimento</span></div>
+<div class="proj-desc">Base de dados para gestão com SQL - 50% concluído.</div>
+<div class="tags"><span class="tag">SQL</span><span class="tag">Base de Dados</span></div>
+</div>
+
+<div class="proj-card">
+<div class="proj-img">Portfólio</div>
+<div class="proj-title">Portfólio Pessoal <span class="badge badge-green">Finalizado</span></div>
+<div class="proj-desc">Meu site pessoal para apresentar meus trabalhos e habilidades.</div>
+<div class="tags"><span class="tag">HTML</span><span class="tag">GitHub Pages</span></div>
+</div>
+
+</div>
+
 <div class="section">
 <h2>Minhas <span class="green">Habilidades</span></h2>
 <p style="color:#888;font-size:13px">O que eu realmente sei fazer.</p>
@@ -57,18 +98,14 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 <div class="card" style="text-align:center">5️⃣<br><b>HTML</b><div class="bar"><div class="fill" style="width:50%"></div></div><small>50%</small></div>
 <div class="card" style="text-align:center">🐙<br><b>Git & GitHub</b><div class="bar"><div class="fill" style="width:40%"></div></div><small>40%</small></div>
 </div>
-<h3 style="margin-top:20px">Outras Habilidades</h3>
-<div style="display:flex;flex-wrap:wrap;gap:8px">
-<div class="card" style="padding:8px 16px;border-radius:20px">Comunicação</div>
-<div class="card" style="padding:8px 16px;border-radius:20px">Trabalho em equipe</div>
-<div class="card" style="padding:8px 16px;border-radius:20px;background:#22ff8822;border:1px solid #22ff88">Rede Ponto a Ponto</div>
-<div class="card" style="padding:8px 16px;border-radius:20px">Cabeamento RJ45</div>
 </div>
-</div>
+
 <div class="section" id="contacto">
 <h2>Contacto</h2>
 <div class="card">📱 <a href="https://wa.me/244952654861" style="color:#22ff88;font-weight:700;text-decoration:none">WhatsApp - 952 654 861</a></div>
-<div class="card">✉️ <a href="mailto:martinsrozenaldo51@gmail.com" style="color:#fff;text-decoration:none">martinsrozenaldo51@gmail.com</a></div>
+<div class="card">✉️ martinsrozenaldo51@gmail.com</div>
 </div>
+
+<div style="text-align:center;padding:30px;color:#555;font-size:12px">© 2026 Rozenaldo Martins - Benguela - Cód Unitel</div>
 </body>
 </html>
